@@ -1,2 +1,4 @@
-# Project-PBP-1
-Project Mandiri 1
+ElektroShop adalah website jual beli elektronik sederhana yang terdiri dari 3 halaman utama (Home, Produk, dan Contact) yang saling terhubung. Website ini dibangun menggunakan HTML untuk struktur, CSS Native untuk custom styling pada header, footer, dan product card, serta Bootstrap framework untuk layout responsive dan komponen UI. Fitur interaktif ditambahkan dengan JavaScript native, meliputi slider otomatis yang berganti setiap 3 detik, filter produk berdasarkan kategori (Smartphone, Laptop, Audio), dan validasi form contact yang memeriksa input nama, email, nomor telepon, dan pesan. Website menampilkan 6 produk elektronik dengan gambar custom, dilengkapi informasi spesifikasi, harga, dan tombol untuk menghubungi penjual, serta memiliki desain modern dengan efek hover, animasi smooth, dan sticky navigation untuk meningkatkan user experience.
+
+
+https://youtu.be/uer7dZVhjHg?si=zGDEW1L2DxrnVl-d
