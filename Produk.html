@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElektroShop - Produk</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Style langsung di HTML agar pasti jalan */
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .product-price {
+            color: #667eea;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="custom-header">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="logo">⚡ ElektroShop</a>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="produk.html" class="active">Produk</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Katalog Produk</h1>
+            <p>Temukan elektronik pilihan Anda</p>
+        </div>
+    </section>
+
+    <!-- Filter -->
+    <div class="container my-4">
+        <div class="text-center">
+            <button class="filter-btn active" onclick="filterProducts('all')">Semua</button>
+            <button class="filter-btn" onclick="filterProducts('smartphone')">Smartphone</button>
+            <button class="filter-btn" onclick="filterProducts('laptop')">Laptop</button>
+            <button class="filter-btn" onclick="filterProducts('audio')">Audio</button>
+        </div>
+    </div>
+
+    <!-- Product List -->
+    <div class="container mb-5">
+        <div class="row" id="product-list">
+            <!-- Phone 1 -->
+            <div class="col-md-4 mb-4 product-item" data-category="smartphone">
+                <div class="card product-card">
+                    <img src="images/phone1.jpeg" class="card-img-top" alt="Smartphone Premium">
+                    <div class="card-body">
+                        <h5>Smartphone Premium</h5>
+                        <p class="text-muted">8GB RAM, 256GB</p>
+                        <p class="product-price">Rp 5.999.000</p>
+                        <a href="contact.html" class="btn btn-primary w-100">Hubungi</a>
+                    </div>
+                </div>
+            </div>
+
+           <!-- Laptop 1 -->
+<div class="col-md-4 mb-4 product-item" data-category="laptop">
+    <div class="card product-card">
+        <img src="images/laptop1.jpeg" class="card-img-top" alt="Laptop Gaming" 
+             onerror="this.src='images/laptop1.png'; this.onerror=function(){this.src='images/laptop1.jpg'}">
+        <div class="card-body">
+            <h5>Laptop Gaming</h5>
+            <p class="text-muted">RTX 4060, i7</p>
+            <p class="product-price">Rp 15.999.000</p>
+            <a href="contact.html" class="btn btn-primary w-100">Hubungi</a>
+        </div>
+    </div>
+</div>
+
+            <!-- Headphone -->
+            <div class="col-md-4 mb-4 product-item" data-category="audio">
+                <div class="card product-card">
+                    <img src="images/headphone.jpeg" class="card-img-top" alt="Headphone Wireless">
+                    <div class="card-body">
+                        <h5>Headphone Wireless</h5>
+                        <p class="text-muted">Noise Canceling</p>
+                        <p class="product-price">Rp 1.299.000</p>
+                        <a href="contact.html" class="btn btn-primary w-100">Hubungi</a>
+                    </div>
+                </div>
+            </div>
+
+          <!-- Phone2 - coba berbagai ekstensi -->
+<div class="col-md-4 mb-4 product-item" data-category="smartphone">
+    <div class="card product-card">
+        <img src="images/phone2.jpeg" class="card-img-top" alt="Smartphone Budget" 
+             onerror="this.src='images/phone2.png'; this.onerror=function(){this.src='images/phone2.jpg'}">
+        <div class="card-body">
+            <h5>Smartphone Budget</h5>
+            <p class="text-muted">6GB RAM, 128GB</p>
+            <p class="product-price">Rp 2.999.000</p>
+            <a href="contact.html" class="btn btn-primary w-100">Hubungi</a>
+        </div>
+    </div>
+</div>
+
+           <!-- Laptop2 - coba berbagai ekstensi -->
+<div class="col-md-4 mb-4 product-item" data-category="laptop">
+    <div class="card product-card">
+        <img src="images/laptop2.jpeg" class="card-img-top" alt="Laptop Office"
+             onerror="this.src='images/laptop2.png'; this.onerror=function(){this.src='images/laptop2.jpg'}">
+        <div class="card-body">
+            <h5>Laptop Office</h5>
+            <p class="text-muted">i5, 16GB RAM</p>
+            <p class="product-price">Rp 8.999.000</p>
+            <a href="contact.html" class="btn btn-primary w-100">Hubungi</a>
+        </div>
+    </div>
+</div>
+
+            <!-- Speaker -->
+            <div class="col-md-4 mb-4 product-item" data-category="audio">
+                <div class="card product-card">
+                    <img src="images/speaker.jpeg" class="card-img-top" alt="Speaker Bluetooth">
+                    <div class="card-body">
+                        <h5>Speaker Bluetooth</h5>
+                        <p class="text-muted">Waterproof</p>
+                        <p class="product-price">Rp 899.000</p>
+                        <a href="contact.html" class="btn btn-primary w-100">Hubungi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>⚡ ElektroShop</h5>
+                    <p>Solusi elektronik terpercaya</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Link Cepat</h5>
+                    <a href="index.html">Home</a> | 
+                    <a href="produk.html">Produk</a> | 
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-md-4">
+                    <h5>Kontak</h5>
+                    <p>📞 +62 812-3456-7890</p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2025 ElektroShop</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
